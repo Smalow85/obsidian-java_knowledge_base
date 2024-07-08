@@ -53,3 +53,7 @@ public void whenParallelProcessing_thenMainThreadWillBlockUntilCompletion()
     }
 ```
 
+A _CountDownLatch_ is a construct that a thread _wait_s on while other threads _count down_ on the latch until it reaches zero.
+
+We can think of this like a dish at a restaurant that is being prepared. No matter which cook prepares however many of the _n_ items, the waiter must _wait_ until all the items are on the plate. If a plate takes _n_ items, any cook will _count down_ on the latch for each item she puts on the plate.
+

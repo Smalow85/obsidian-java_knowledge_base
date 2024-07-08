@@ -16,6 +16,8 @@ Optionally, we can pass the second argument to the constructor, which is a _Run
 ```java
 public CyclicBarrier(int parties, Runnable barrierAction)
 ```
+
+![[Pasted image 20240707224454.png]]
 ## Example of implementation
 
 ```java
@@ -51,8 +53,27 @@ public class CyclicBarrierDemo {
 			 } 
 		} 
 	}
+
+	public void runSimulation(int numWorkers, int numberOfPartialResults) {
+		NUM_PARTIAL_RESULTS = numberOfPartialResults; 
+		NUM_WORKERS = numWorkers; 
+		cyclicBarrier = 
+				new CyclicBarrier(NUM_WORKERS, new AggregatorThread());
+		System.out.println("Spawning " + NUM_WORKERS + " worker threads to compute " + NUM_PARTIAL_RESULTS + " partial results each"); 
+		for (int i = 0; i < NUM_WORKERS; i++) { 
+			Thread worker = new Thread(new NumberCruncherThread());
+			worker.setName("Thread " + i); worker.start(); 
+		} 
+	} 
+	
+	public static void main(String[] args) { 
+		CyclicBarrierDemo demo = new CyclicBarrierDemo();
+		demo.runSimulation(5, 3); 
+	}
 }
 ```
 
+A _CyclicBarrier_ is a reusable construct where a group of threads _waits_ together until all of the threads _arrive_. At that point, the barrier is broken and an _action_ can optionally be taken.
 
+We can think of this like a group of friends. Every time they plan to eat at a restaurant they decide a common point where they can meet. They _wait_ for each other there, and only when everyone _arrives_ can they go to the restaurant to eat together.
 
