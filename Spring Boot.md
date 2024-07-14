@@ -5,8 +5,8 @@ It provides a pre-configured platform for building Spring-powered applications w
 
 Spring Boot includes the following features:
 
-- Embedded server eliminates the need for complex application development
-- Starter dependencies that facilitate building and configuring apps
+- [[Embedded server]] eliminates the need for complex application development
+- [[Spring Boot Starters]] dependencies that facilitate building and configuring apps
 - Automated Spring configuration
-- Metrics, health check, and other reports
+- Metrics, health check, and other reports (via [[Actuators]])
 - Everything in Spring Boot is pre-configured. We simply need to use the proper configuration to use a specific functionality. If we want to create a REST API, we can use Spring Boot.

@@ -1,0 +1,1 @@
+**Advice** is an action taken by an aspect at a particular join point. **Different types of advice include “around,” “before” and “after” advice.** The main purpose of aspects is to support cross-cutting concerns, such as logging, profiling, caching, and transaction management.
