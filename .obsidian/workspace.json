@@ -18,8 +18,85 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fbc2006c4348ca9c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "33a1092af3ccb3cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring Security.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "01147eaf1c330991",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Authorization.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bb2537b2f0137c4b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "37607745c6f2e98b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JVM.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c6946898f0626a2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring Security Filters.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "61f23269ab5f6710",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring Security Filters.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -48,7 +125,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "solid",
+                "query": "SOLID",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Advice Types.md",
+                "file": "JVM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +179,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Advice Types.md",
+                "file": "JVM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +202,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Advice Types.md"
+                "file": "JVM.md"
               }
             }
           },
@@ -142,7 +219,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 400.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,9 +231,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b3e2d504782944ae",
+  "active": "df33ff07ffa1c46e",
   "lastOpenFiles": [
+    "Garbage collection.md",
+    "Database Sharding.md",
+    "Pivot and Unpivot Operations.md",
+    "Java Concurrency.md",
+    "SOLID.md",
+    "isolation levels.md",
+    "ACID.md",
+    "Pasted image 20240715203445.png",
+    "Authorization.md",
+    "Spring Security.md",
+    "Security Context.md",
+    "Authentication Manager.md",
+    "Password Encoder.md",
+    "Authentication Provider.md",
+    "Spring Security Filters.md",
     "Advice Types.md",
+    "Authentication.md",
+    "Pasted image 20240715120432.png",
+    "Pasted image 20240715114727.png",
+    "Pasted image 20240715114712.png",
+    "Pasted image 20240715114144.png",
+    "Pasted image 20240715113958.png",
+    "Pasted image 20240715113903.png",
+    "Pasted image 20240715110815.png",
+    "Pointcut Expressions.md",
     "Spring AOP and AspectJ.md",
     "Pasted image 20240714231008.png",
     "Spring AOP.md",
@@ -168,30 +269,6 @@
     "Spring Component Scanning.md",
     "Bean Scopes.md",
     "Spring Core.md",
-    "Pasted image 20240710230512.png",
-    "Spring Container.md",
-    "Dependency Injection.md",
-    "Inversion of Control.md",
-    "Embedded server.md",
-    "Auto configuration.md",
-    "Spring profiles and properties.md",
-    "Spring Framework.md",
-    "Spring.md",
-    "Actuator.md",
-    "Spring Boot.md",
-    "Spring Boot Starters.md",
-    "README.md",
-    "Semaphore.md",
-    "CountDownLatch.md",
-    "CyclicBarrier.md",
-    "Pasted image 20240707224454.png",
-    "Java Concurrency.md",
-    "Pasted image 20240707130447.png",
-    "Pasted image 20240625225526.png",
-    "Pasted image 20240624215406.png",
-    "Pasted image 20240624213255.png",
-    "Pasted image 20240623231205.png",
-    "Pasted image 20240623231034.png",
     "Untitled 4.canvas",
     "Untitled",
     "Java",

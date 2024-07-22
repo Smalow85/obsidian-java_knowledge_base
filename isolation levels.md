@@ -1,5 +1,11 @@
 SQL supports four transaction isolation levels, each differing in how it deals with concurrency and locks to protect the integrity of the data. Each level makes different trade-offs between consistency and performance. Here is a brief of these isolation levels with relevant SQL statements.
-### READ UNCOMMITTED 
+
+### LOST UPDATES
+
+If the two transactions want to change the same columns, the second transaction will overwrite the first one, therefore losing the first transaction update.
+
+So an update is lost when a user overrides the current database state without realizing that someone else changed it between the moment of data loading and the moment the update occurs.
+### READ UNCOMMITTED -> DIRTY READ
 
 This is the lowest level of isolation. **One transaction may read not yet committed changes made by other transaction, also known as “Dirty Reads”.** Here’s an example of how to set this level:
 
@@ -9,7 +15,7 @@ BEGIN TRANSACTION;
 -- Execute your SQL commands here
 COMMIT;
 ```
-### READ COMMITTED 
+### READ COMMITTED -> NON-REPEATABLE READ
 
 A transaction only sees data changes committed before it started, averting “Dirty Reads”. However, it may experience **“Non-repeatable Reads”, i.e. if a transaction reads the same row multiple times, it might get a different result each time.** Here’s how to set this level:
 
@@ -20,7 +26,7 @@ BEGIN TRANSACTION;
 COMMIT;
 ```
 
-### REPEATABLE READ 
+### REPEATABLE READ -> PHANTON READ 
 
 Here, once a transaction reads a row, any other transaction’s writes (changes) onto those rows are blocked until the first transaction is finished, preventing “Non-repeatable Reads”. However, “Phantom Reads” may still occur (**Phantom read occurs when one user is repeating a read operation on the same records, but has new records in the results set**). Here’s how to set this level:
 
