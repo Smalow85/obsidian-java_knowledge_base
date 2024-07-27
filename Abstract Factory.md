@@ -30,8 +30,9 @@ public class GoatCheese implements Cheese {
 
 ```java
 public class MozzarellaCheese implements Cheese {
+	
 	public MozzarellaCheese() {
-	prepareCheese();
+		prepareCheese();
 	}
 
 	@Override

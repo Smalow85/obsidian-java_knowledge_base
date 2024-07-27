@@ -6,7 +6,6 @@ JVM (Java Virtual Machine) is an abstract machine. It is a specification that pr
 3. **Runtime Instance** Whenever you write java command on the command prompt to run the java class, an instance of JVM is created.
 
 Being a virtual machine means the JVM is an abstraction of an underlying, actual machine—such as the server that your program is running on. Regardless of what operating system or hardware is actually present, the JVM creates a predictable environment for programs to run within. Unlike a true virtual machine, however, the JVM doesn't create a virtual operating system. It would be more accurate to describe the JVM as a _managed runtime environment_, or a _process virtual machine_.
-
 ### Java class loader
 
 The **Java class loader** is the part of the JVM that loads classes into memory and makes them available for execution. Class loaders use techniques like lazy-loading and caching to make class loading as efficient as it can be.

@@ -11,9 +11,29 @@
             "id": "b3e2d504782944ae",
             "type": "leaf",
             "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "f6fb7f5604b7d04d",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "Advice Types.md",
+                "file": "Database optimization.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fb628afeb75f0921",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algorithms.md",
                 "mode": "source",
                 "source": false
               }
@@ -33,30 +53,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Security.md",
+                "file": "Garbage collection.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "01147eaf1c330991",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Authorization.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bb2537b2f0137c4b",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           },
           {
@@ -65,10 +65,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JVM.md",
+                "file": "Behavioral patterns.md",
                 "mode": "source",
                 "source": false
               }
+            }
+          },
+          {
+            "id": "47c7a6f629c36060",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -96,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -125,7 +133,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SOLID",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -162,7 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JVM.md",
+                "file": "Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +187,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JVM.md",
+                "file": "Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,7 +210,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JVM.md"
+                "file": "Algorithms.md"
               }
             }
           },
@@ -231,51 +239,51 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "df33ff07ffa1c46e",
+  "active": "fb628afeb75f0921",
   "lastOpenFiles": [
-    "Garbage collection.md",
-    "Database Sharding.md",
-    "Pivot and Unpivot Operations.md",
-    "Java Concurrency.md",
+    "Two pointers.md",
+    "Algorithms.md",
+    "Arrays and Hashing.md",
+    "Pasted image 20240724221727.png",
+    "Database optimization.md",
+    "Indexes.md",
+    "Optimizing Connection Pool Settings.md",
+    "Untitled.md",
+    "race condition.md",
+    "Query Planner.md",
+    "Pushing and pulling from Git remotes.md",
+    "Proxy.md",
+    "Programming Paradigms.md",
+    "URL.md",
+    "SELF JOIN.md",
+    "Untitled.canvas",
+    "Untitled 4.canvas",
+    "Untitled 3.canvas",
+    "Untitled 2.canvas",
+    "Untitled",
     "SOLID.md",
+    "Behavioral patterns.md",
+    "Garbage collection.md",
+    "Spring Security Filters.md",
     "isolation levels.md",
     "ACID.md",
+    "Connection Pooling.md",
+    "Backend Performance.md",
+    "Code optimization.md",
+    "Batch Processing.md",
+    "Code Profiling.md",
+    "Pasted image 20240723214506.png",
+    "Pasted image 20240723213918.png",
+    "Pasted image 20240723213822.png",
+    "Pasted image 20240723212901.png",
+    "TO DO.md",
     "Pasted image 20240715203445.png",
-    "Authorization.md",
-    "Spring Security.md",
-    "Security Context.md",
-    "Authentication Manager.md",
-    "Password Encoder.md",
-    "Authentication Provider.md",
-    "Spring Security Filters.md",
-    "Advice Types.md",
-    "Authentication.md",
     "Pasted image 20240715120432.png",
     "Pasted image 20240715114727.png",
     "Pasted image 20240715114712.png",
     "Pasted image 20240715114144.png",
-    "Pasted image 20240715113958.png",
-    "Pasted image 20240715113903.png",
-    "Pasted image 20240715110815.png",
-    "Pointcut Expressions.md",
-    "Spring AOP and AspectJ.md",
-    "Pasted image 20240714231008.png",
-    "Spring AOP.md",
-    "Pasted image 20240714223150.png",
-    "Spring ApplicationContext.md",
-    "Spring Bean.md",
-    "Circular Dependencies.md",
-    "Spring Core Annotations.md",
-    "Spring Component Scanning.md",
-    "Bean Scopes.md",
-    "Spring Core.md",
-    "Untitled 4.canvas",
-    "Untitled",
     "Java",
-    "Untitled 3.canvas",
-    "Untitled 2.canvas",
     "Untitled 1.canvas",
-    "Untitled.canvas",
     "SSL 1",
     "Backend"
   ]

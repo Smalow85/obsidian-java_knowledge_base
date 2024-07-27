@@ -103,8 +103,6 @@ B+ tree is another data structure that’s used to store data and looks almost t
 
 ![An illustration of a B+tree](https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/5_b-tree-indexing.jpeg)
 
-An illustration of a B+tree. | Image: Dhanushka Madushan
-
  The 13, 30, 9, 11, 16 and 38 non-leaf values are again repeated in leaf nodes. 
 
 Leaf nodes include all values and all of the records are in sorted order. B+tree allows you to do the same search as B-tree, but it also allows you to  travel through all the values in a leaf node if we put a pointer to each leaf node as follows.
