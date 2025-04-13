@@ -26,8 +26,9 @@
 ### DB-related annotations
 
 [[@Transactional]]
+### Spring Boot annotations
 
-@SpringBootApplication
+[[@SpringBootApplication]]
 
 @EnableAutoConfiguration
 

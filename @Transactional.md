@@ -43,6 +43,62 @@ The proxy mechanism is central to how `@Transactional` works. Spring uses eith
 
 AOP plays a crucial role here, as it allows the separation of transaction management from business logic. The `@Transactional` annotation is, in essence, an aspect that Spring applies to the target method. This aspect manages the transaction lifecycle transparently, ensuring that the method is executed within the bounds of a transaction.
 
+### Propagation Behavior of Transactions
+
+One of the key aspects of @Transactional is the control of transaction boundaries through propagation behavior. The most commonly used propagation behaviors include:
+
+- `REQUIRED` (default): Supports the current transaction; creates a new one if none exists.
+- `REQUIRES_NEW`: Creates a new transaction, suspending the current one if it exists.
+- `SUPPORTS`: Runs within a transaction if one is already present; otherwise, runs non-transactionally.
+- `NOT_SUPPORTED`: Executes non-transactionally, suspending any current transaction.
+- `MANDATORY`: Supports the current transaction; throws an exception if no current transaction exists.
+- `NEVER`: Ensures the method is not run within a transaction; throws an exception if a transaction exists.
+- `NESTED`: Executes within a nested transaction if a current transaction exists; otherwise, behaves like REQUIRED.
+
+Understanding these behaviors is crucial for correctly managing transaction demarcation, especially in complex applications with multiple transactional methods interacting with each other.
+### Isolation Levels in Transactions
+
+[[isolation levels]] define how data accessed by one transaction is isolated from other transactions.
+- `DEFAULT`: Uses the default isolation level of the underlying datastore.
+- `READ_UNCOMMITTED`: Allows dirty reads; one transaction may see uncommitted changes made by another.
+- `READ_COMMITTED`: Prevents dirty reads; data read is committed at the point of reading.
+- `REPEATABLE_READ`: Ensures repeatable reads; data read cannot change during the transaction.
+- `SERIALIZABLE`: The highest level; complete isolation from other transactions.
+
+### Rollback Rules and Exception Handling
+
+Spring provides a flexible way to define rollback behavior in `@Transactional`. By default, a transaction will roll back on runtime, unchecked exceptions (like RuntimeException) but not on checked exceptions. However, this behavior can be customized using the `rollbackFor` and `noRollbackFor` attributes of the `@Transactional` annotation.
+
+```java
+@Service
+public class MyService {
+    @Transactional(rollbackFor = {CustomException.class})
+    public void myMethod() {
+        // Business logic
+    }
+}
+```
+
+This configuration specifies that the transaction should roll back for CustomException.
+
+### Best Practices and Common Pitfalls
+
+- Service Layer: Ideal for @Transactional as it typically encapsulates business logic and calls multiple DAO methods, which should be part of the same transaction.
+- Data Access Layer (DAO): Avoid using @Transactional here, as it can lead to multiple transactions within a single business process.
+- Controller Layer: Generally not recommended, as controllers should not be aware of transaction management.
+#### Performance Considerations and Optimizations
+- Avoid Long Transactions: Long-running transactions can hold database locks for extended periods, impacting performance. Keep transactions as short as possible.
+- Read-Only Transactions: Mark transactions as read-only whenever possible. This can optimize database performance and resource utilization.
+- Lazy Loading: Be cautious with lazy loading within transactions. Accessing lazy-loaded data outside of the transactional context can lead to issues like LazyInitializationException.
+
+#### 6.3 Troubleshooting Common Issues
+- Transaction Not Starting: Ensure that the method with `@Transactional` is being called from outside its own class. Transactions won’t start if the method is called internally due to the way Spring AOP works.
+- Unexpected Rollbacks: Be aware of the default rollback behavior. Spring rolls back on unchecked exceptions but not on checked ones. Customize this behavior with the `rollbackFor` attribute if necessary.
+- Proxying Issues: Remember that Spring uses proxies for transaction management. Final classes and methods can’t be proxied using Spring’s default AOP proxying mechanism.
+- Isolation Level Conflicts: Understand the impact of different isolation levels on your application, especially in terms of performance and concurrency behavior.
+
+
+
 
 
 
